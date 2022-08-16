@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Box } from '@mui/system';
-import { Button } from '@mui/material';
+import { Button, Container } from '@mui/material';
 
 function App() {
   return (
@@ -59,6 +59,13 @@ function App() {
      <Box component="button" variant="contained">
       submit
      </Box>
+    
+    <h1>Material Container properties :: </h1>
+
+    <Container sx={{border:'1px solid red'}} fixed>
+       <p>This is the matrial ui container</p>
+    </Container>
+
    
     </div>
   );
