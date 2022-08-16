@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Box } from '@mui/system';
-import { Button, Container } from '@mui/material';
+import { Button, Container, Grid } from '@mui/material';
 
 function App() {
   return (
@@ -89,6 +89,78 @@ function App() {
 
        <p>This is the matrial ui container mim vaii</p>
     </Container>
+
+  
+ <h1> Most important in Grid Layout in Material Ui Design </h1>
+
+ <Grid container 
+
+//  spacing is working from row and column both sides 
+      spacing={2}
+
+//  this propertity is working only row based 
+    // rowSpacing={5}
+ 
+
+    //  this propertity is working only column based 
+      //  columnSpacing={5}
+
+    //  it is workig as flex and grid properties and also used its all properties
+
+    //  direction="row-reverse"  // row ,row-reverse,column,column-reverse 
+    //  alignItems='flex-start'  //  flex-start,flex-end,center,baseline,streach
+    //  justifyContent="center"
+
+    // column ="12"  // it will be increase as my wishes 
+ 
+ >
+
+    <Grid item xs={12} sm={6} md={8} lg={4} >
+      <Box border="1px solid red"  p="0px">
+        Responsives Grid 1s
+      </Box>
+    </Grid>
+    <Grid item xs={12} sm={6} md={4} lg={8}>
+      <Box border="1px solid green">
+        Responsives Grid 2
+      </Box>
+    </Grid>
+    <Grid item xs={12} sm={6} md={8} lg={4}>
+      <Box border="1px solid red">
+        Responsives Grid 3
+      </Box>
+    </Grid>
+    <Grid item xs={12} sm={6} md={4} lg={8}>
+      <Box border="1px solid green">
+        Responsives Grid 4
+      </Box>
+    </Grid>
+
+
+    {/* auto layout  */}
+        <Grid item auto>
+        <Box border="1px solid green">
+           auto layout 1
+        </Box>
+    </Grid>
+
+      <Grid item xs={12} sm={6} md={4} lg={8}>
+        <Box border="1px solid green">
+           auto layout 2
+        </Box>
+    </Grid>
+
+        <Grid item auto>
+        <Box border="1px solid green">
+           auto layout 3
+        </Box>
+    </Grid>
+
+ </Grid>
+
+
+
+
    
     </div>
   );
