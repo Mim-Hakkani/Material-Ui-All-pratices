@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Box } from '@mui/system';
-import { BottomNavigation, BottomNavigationAction, Breadcrumbs, Button, Container, Divider, Grid, IconButton, ImageList, ImageListItem, ImageListItemBar, Link, ListSubheader, Pagination, Stack, Typography } from '@mui/material';
+import { BottomNavigation, BottomNavigationAction, Breadcrumbs, Button, Container, Divider, Grid, IconButton, ImageList, ImageListItem, ImageListItemBar, Link, ListSubheader, Pagination, Paper, Stack, Typography } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
 import RestoreIcon from '@mui/icons-material/Restore';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -370,6 +370,12 @@ itemsBeforeCollapse ={2}
 
 
 <h1>Drawer , Tabs , stepper , speed dial </h1>
+
+<Paper square>
+  <span>miim</span>
+</Paper>
+
+<h1> Baki gula mutamuti parbo... The End </h1>
     </div>
   );
 }
