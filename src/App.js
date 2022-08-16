@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Box } from '@mui/system';
-import { Button, Container, Grid } from '@mui/material';
+import { Button, Container, Divider, Grid, Stack } from '@mui/material';
 
 function App() {
   return (
@@ -159,6 +159,26 @@ function App() {
  </Grid>
 
 
+<h1> Stact in material ui </h1>
+
+ {/* initially stack is worked in column wise  */}
+
+<Stack 
+  direction="row"
+  justifyContent="center"
+  alignItems="center"
+  spacing={1}
+  divider={<Divider orientation="vertical" flexItem />}
+
+  border="1px solid #d5d5d5"
+>
+  <p>Home</p>
+  <p>Menu</p>
+  <p>About</p>
+  <p>Items</p>
+  <p>Gallary</p>
+  <p>Contact</p>
+</Stack>
 
 
    
