@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Box } from '@mui/system';
-import { BottomNavigation, BottomNavigationAction, Breadcrumbs, Button, Container, Divider, Grid, IconButton, ImageList, ImageListItem, ImageListItemBar, Link, ListSubheader, Stack, Typography } from '@mui/material';
+import { BottomNavigation, BottomNavigationAction, Breadcrumbs, Button, Container, Divider, Grid, IconButton, ImageList, ImageListItem, ImageListItemBar, Link, ListSubheader, Pagination, Stack, Typography } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
 import RestoreIcon from '@mui/icons-material/Restore';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -346,6 +346,30 @@ itemsBeforeCollapse ={2}
     Full Width button 
   </Button>
 
+   <h1>Material Special Component Link </h1>
+
+  <Link 
+  //  component="button" 
+   variant='body1'
+   color="primary" 
+   underline='hover'
+   href="https://www.ehsanmarketing.com"
+  //  rel="noopener"
+   target="_blank"
+   >Ehsan Marketing</Link>
+
+   <h3>Pagination Item Start </h3>
+
+   <Pagination
+    count={15}
+    color="primary"
+    defaultPage={12}
+    variant="outlined"
+    // hideNextButton={true}
+     />
+
+
+<h1>Drawer , Tabs , stepper , speed dial </h1>
     </div>
   );
 }
