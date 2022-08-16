@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Box } from '@mui/system';
+import { Button } from '@mui/material';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       padding:'5px', 
       // add hover in inline css 
      '&:hover': {
-        background: "#f00",
+       color: "#000",
       }}} 
 
       //  add the css style without sx 
@@ -51,6 +52,13 @@ function App() {
         // <Box className="hakkani mim"></Box>
      
      */}
+
+
+     {/* convet box to button  */}
+
+     <Box component="button" variant="contained">
+      submit
+     </Box>
    
     </div>
   );
