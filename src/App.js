@@ -321,6 +321,15 @@ itemsBeforeCollapse ={2}
   <Typography color="text.primary">Breadcrumbs</Typography>
 </Breadcrumbs>
 
+
+<h1>Materiul Ui Button Icons </h1>
+ 
+ {/* different variant is ready  */}
+
+<Button variant="text" disabled>Text</Button>
+<Button variant="contained" >Contained</Button>
+<Button variant="outlined" >Outlined</Button>
+
     </div>
   );
 }
