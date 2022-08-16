@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import { Box } from '@mui/system';
-import { Button, Container, Divider, Grid, ImageList, ImageListItem, Stack } from '@mui/material';
-
+import { Button, Container, Divider, Grid, IconButton, ImageList, ImageListItem, ImageListItemBar, ListSubheader, Stack } from '@mui/material';
+import InfoIcon from '@mui/icons-material/Info';
 function App() {
   return (
     <div className="App" style={{border:'1px solid orange',padding:'10px 10px'}}>
@@ -182,8 +182,9 @@ function App() {
 
 
 <h1>Time To play With images </h1>
-
- <ImageList 
+ 
+ {/* basic images list  */}
+     <ImageList 
   sx={{ width: 500, height: 450 }}
   cols={3}  // number of columns 
   rowHeight={164} // show how many height in 
@@ -202,6 +203,40 @@ function App() {
       ))}
     </ImageList>
 
+ {/* images with icon and titles  */}
+   <ImageList sx={{ width: 500, height: 450 }}>
+      <ImageListItem key="Subheader" cols={2}>
+        <ListSubheader component="div">Pratices the images list</ListSubheader>
+      </ImageListItem>
+      {itemData.map((item) => (
+        <ImageListItem key={item.img}>
+          <img
+            src={`${item.img}?w=248&fit=crop&auto=format`}
+            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            alt={item.title}
+            loading="lazy"
+          />
+          <ImageListItemBar
+            title={<p>Golam Hakkani mim</p>}
+            // subtitle={<p>front end developer</p>}
+            actionIcon={
+              <IconButton
+                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                aria-label={`info about ${item.title}`}
+              >
+                <InfoIcon/>
+              </IconButton>
+            }
+
+            // actionPosition="right" // or left
+            // position="top"    // top or bottom which show the icons bar
+          />
+        </ImageListItem>
+      ))}
+    </ImageList>
+
+
+    <h1>Hidden in material ui (Note : it is deprecated in version 5) not used </h1> 
 
    
     </div>
