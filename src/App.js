@@ -1,9 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import { Box } from '@mui/system';
-import { Button, Container, Divider, Grid, IconButton, ImageList, ImageListItem, ImageListItemBar, ListSubheader, Stack } from '@mui/material';
+import { BottomNavigation, BottomNavigationAction, Breadcrumbs, Button, Container, Divider, Grid, IconButton, ImageList, ImageListItem, ImageListItemBar, Link, ListSubheader, Stack, Typography } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
+import RestoreIcon from '@mui/icons-material/Restore';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { useState } from 'react';
 function App() {
+    const [value, setValue] = useState(0);
   return (
     <div className="App" style={{border:'1px solid orange',padding:'10px 10px'}}>
      <h1>Bismillah Hir Rahmanir Rahim </h1>
@@ -238,7 +243,84 @@ function App() {
 
     <h1>Hidden in material ui (Note : it is deprecated in version 5) not used </h1> 
 
-   
+   <Divider></Divider>
+
+   <h1>Bottom Navigation : </h1>
+   <h3>It Works as icon with names / labels </h3>
+
+<BottomNavigation
+  showLabels  // show the labels name / title name 
+  value={value}
+    onChange={(event, newValue) => {
+      setValue(newValue);
+    }}
+>
+  <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+  <BottomNavigationAction label="Favorites" icon={<FavoriteIcon sx={{color:'red'}}/>} />
+  <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+  <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+  <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+</BottomNavigation>
+
+<Divider/>
+
+<h1>Breadcumb :: in mui</h1>
+
+<Breadcrumbs 
+aria-label="breadcrumb" // default dite hobe 
+
+separator="=>"  // used different types of icons and node also
+
+maxItems={2}   // how many breadcoeme to show in site if used it then first and last item is showm and middle is collaps 
+
+itemsAfterCollapse ={2} 
+// if used maxitems then used after items collaps show data 
+
+itemsBeforeCollapse ={2}
+ // before the items collaps shown data 
+>
+  <Link underline="hover" color="inherit" href="/">
+    MUI
+  </Link>
+  <Link
+    underline="hover"
+    color="inherit"
+    href="/material-ui/getting-started/installation/"
+  >
+    <LocationOnIcon />
+    Core0
+  </Link>
+    <Link
+    underline="hover"
+    color="inherit"
+    href="/material-ui/getting-started/installation/"
+  >
+    Core1
+  </Link>
+    <Link
+    underline="hover"
+    color="inherit"
+    href="/material-ui/getting-started/installation/"
+  >
+    Core2
+  </Link>
+    <Link
+    underline="hover"
+    color="inherit"
+    href="/material-ui/getting-started/installation/"
+  >
+    Core3
+  </Link>
+    <Link
+    underline="hover"
+    color="inherit"
+    href="/material-ui/getting-started/installation/"
+  >
+    Core4
+  </Link>
+  <Typography color="text.primary">Breadcrumbs</Typography>
+</Breadcrumbs>
+
     </div>
   );
 }
