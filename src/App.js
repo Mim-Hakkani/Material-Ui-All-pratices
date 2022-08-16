@@ -9,6 +9,11 @@ function App() {
     
      <Box 
      
+    //  convert box (div) to span 
+
+    component="span"
+
+     
      sx={{
       border:'1px solid red',
       padding:'5px', 
@@ -33,6 +38,19 @@ function App() {
          
           
      </Box>
+
+     {/* add styles in 4 way in material uis 
+     
+     
+       <Button sx={{ mb: 3 }}>
+        // or
+        <Box mb={3}>
+        // or
+        <Box marginBottom={3}>
+         or
+        // <Box className="hakkani mim"></Box>
+     
+     */}
    
     </div>
   );
