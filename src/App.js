@@ -329,6 +329,22 @@ itemsBeforeCollapse ={2}
 <Button variant="text" disabled>Text</Button>
 <Button variant="contained" >Contained</Button>
 <Button variant="outlined" >Outlined</Button>
+<Button variant="contained"  color="secondary">color Button</Button>
+<Button 
+  variant="contained" 
+  color="secondary" // success , error
+  size='medium' // medium , small
+  startIcon={<LocationOnIcon/>} 
+  endIcon={<LocationOnIcon/>}
+ >color Button</Button>
+
+ <Button 
+    variant='contained' 
+    fullWidth 
+    href="http://www.facebook.com"
+   >
+    Full Width button 
+  </Button>
 
     </div>
   );
