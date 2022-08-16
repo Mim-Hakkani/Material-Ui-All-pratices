@@ -5,7 +5,7 @@ import { Button, Container } from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{border:'1px solid orange',padding:'10px 10px'}}>
      <h1>Bismillah Hir Rahmanir Rahim </h1>
     
      <Box 
@@ -66,6 +66,29 @@ function App() {
        <p>This is the matrial ui container</p>
     </Container>
 
+
+
+    <Container 
+    
+    sx={{border:'1px solid green', mt:"10px"}} 
+
+     // show the cotainer in medium sizes 
+    maxWidth='md'
+
+    /* if true the remove the padding  both sides  ... default false */
+    disableGutters={true}
+
+    fixed  // show all time as a container type 
+
+
+      //  if used this property override the componet as i wish 
+    // component="h1"
+
+    
+    >  
+
+       <p>This is the matrial ui container mim vaii</p>
+    </Container>
    
     </div>
   );
