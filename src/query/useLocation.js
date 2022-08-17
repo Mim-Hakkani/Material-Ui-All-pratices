@@ -3,7 +3,7 @@ import { gql, useQuery } from "@apollo/client";
 
 const GET_LOCATION_ALL =gql`
 query allLocations{
-  locations{
+  locations(page:2){
     results{
       name
       id

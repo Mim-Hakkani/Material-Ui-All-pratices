@@ -2,22 +2,16 @@ import { useQuery } from '@apollo/client';
 import { Typography } from '@mui/material';
 import { Box, Container } from '@mui/system';
 import React from 'react';
-import { GET_LOCATIONS } from '../query/locations';
 import useLocation from '../query/useLocation';
 
-const GraphQlPraticesQuery = () => {
+const WithoutQuery = () => {
 
-    // get data from useQuery hook direct 
-    const {data,loading,error} =useQuery(GET_LOCATIONS)
-
-        // check console if data is comming using useQuery hook 
-      // console.log('data is here :',data);
 
     // fetch data without useQuery hook 
 
-        // const {data:d,loading:l,error:e} =useLocation();
+        const {data,loading,error} =useLocation();
 
-        //  console.log('fetch data without hook', d);
+        //  console.log('fetch data without hook', data);
 
    
     // if loading 
@@ -45,4 +39,4 @@ const GraphQlPraticesQuery = () => {
     );
 };
 
-export default GraphQlPraticesQuery;
+export default WithoutQuery;
