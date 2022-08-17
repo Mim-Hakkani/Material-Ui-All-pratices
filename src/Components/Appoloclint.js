@@ -1,9 +1,10 @@
 import React from 'react';
+import GraphQlPraticesQuery from './GraphQlPraticesQuery';
 
 const Appoloclint = () => {
     return (
         <div>
-            This is the appolo clint sessions ..
+            <GraphQlPraticesQuery />
         </div>
     );
 };
