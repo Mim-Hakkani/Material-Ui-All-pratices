@@ -8,9 +8,9 @@ function App() {
  
   return (
    <>
-   <MateriulUi />
+   {/* <MateriulUi /> */}
    <Appoloclint />
-   <MessengerChat />
+   {/* <MessengerChat /> */}
    </>
   );
 }

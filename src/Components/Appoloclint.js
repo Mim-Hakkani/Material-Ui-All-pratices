@@ -1,6 +1,7 @@
 import { Divider } from '@mui/material';
 import React from 'react';
 import GraphQlPraticesQuery from './GraphQlPraticesQuery';
+import LazyQueryExample from './LazyQueryExample';
 import SingleQuery from './SingleQuery';
 import WithoutQuery from './WithoutUseQuery';
 
@@ -10,7 +11,9 @@ const Appoloclint = () => {
             {/* <GraphQlPraticesQuery /> */}
             <Divider />
             {/* <WithoutQuery /> */}
-            <SingleQuery />
+            {/* <SingleQuery /> */}
+
+            <LazyQueryExample/>
         </div>
     );
 };
