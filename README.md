@@ -1,5 +1,8 @@
-# Material Ui Updated Version With Details 
+# GraphQl , Messenger Api , Material Ui all in one pratices 
 
-* Box 
+* pratices applo clint only quries 
+* material ui components 
+* integrating messenger api 
 
+Live Link : 
 

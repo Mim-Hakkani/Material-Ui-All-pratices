@@ -8,10 +8,10 @@ import WithoutQuery from './WithoutUseQuery';
 const Appoloclint = () => {
     return (
         <div>
-            {/* <GraphQlPraticesQuery /> */}
+            <GraphQlPraticesQuery />
             <Divider />
-            {/* <WithoutQuery /> */}
-            {/* <SingleQuery /> */}
+            <WithoutQuery />
+            <SingleQuery />
 
             <LazyQueryExample/>
         </div>
