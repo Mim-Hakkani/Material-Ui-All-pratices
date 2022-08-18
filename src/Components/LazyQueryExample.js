@@ -8,7 +8,7 @@ const LazyQueryExample = () => {
 
     const [name,setName] =useState('');
 
-    const[getNames, {data,loading,error}]=useLazyQuery(GET_SIMILAR_NAME,{
+    const[getNames, {data,loading,error,called}]=useLazyQuery(GET_SIMILAR_NAME,{
         variables:{
             name
         },
@@ -16,7 +16,7 @@ const LazyQueryExample = () => {
        
     })
 
-    console.log('use lazyQuery Data is :: ',data);
+    console.log('use lazyQuery Data is :: ',loading,error,called ,data);
 
     return (
         <div>
@@ -32,11 +32,11 @@ const LazyQueryExample = () => {
         
              }}
             />
-            <input type="submit" value="Submit" onClick={()=>getNames()} style={{
+            <button onClick={()=>getNames()} style={{
                 backgroundColor:'#658745',
                 color:'#000',
                 padding:'7px 15px'
-            }}/>
+            }}>Search</button>
 
 
             <Container fixed>
